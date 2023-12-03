@@ -1,6 +1,8 @@
 import os
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def find_jinja_template(path: str):
     candidates = []
@@ -12,6 +14,7 @@ def find_jinja_template(path: str):
     if len(candidates) > 1:
         raise ValueError(f"Multiple templates found in {path}, \n {candidates}")
     raise FileNotFoundError(f"No template found in {path}")
+
 
 def find_yaml_file(path: str):
     candidates = []
@@ -25,6 +28,6 @@ def find_yaml_file(path: str):
     raise FileNotFoundError(f"No values found in {path}")
 
 
-def read_values_from_yaml(path: str) -> dict: 
+def read_values_from_yaml(path: str) -> dict:
     with open(path) as f:
         return yaml.safe_load(f)

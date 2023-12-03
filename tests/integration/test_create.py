@@ -1,8 +1,10 @@
-from click.testing import CliRunner
 import filecmp
-from boilerplate.boilerplate import create, sum_it
-from pathlib import Path
 import os
+from pathlib import Path
+
+from click.testing import CliRunner
+
+from boilerplate.boilerplate import create
 
 
 def test_create():
