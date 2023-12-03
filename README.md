@@ -2,6 +2,9 @@
 
 Boilerplate is a simple python cli tool to create boiler plate code from jinja templates. It acts as a thin layer to Jinja. Its sole purpose is to help standarize aspects of boilerplate code writting. See the example usecase bellow and then try it out!
 
+# Installation
+
+TODO
 
 ## Example Usacase
 
@@ -83,3 +86,12 @@ What we achieved?
 1. Wrote one test that we will use for most cases that are similar!
 2. Enforced uniformity of code thus improving readability among developers.
 3. You test both your function but the function interface too! If a function that reads from a source cannot be tested from this template then we may have broken a convention and we should always be aware when doing that.
+
+
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
