@@ -1,3 +1,5 @@
+![Tests](https://github.com/estafons/boilerplate/actions/workflows/ci.yml/badge.svg)
+
 # Boilerplate
 
 Boilerplate is a simple python cli tool to create boiler plate code from jinja templates. It acts as a thin layer to Jinja. Its sole purpose is to help standarize aspects of boilerplate code writting. See the example usecase bellow and then try it out!
