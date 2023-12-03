@@ -1,7 +1,8 @@
-name: "Lint"
+name: "Test"
 
 on:
   push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -20,8 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install ruff
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Lint with ruff
+      - name: Run pytest
         run: |
-          ruff check .
+            pytest
