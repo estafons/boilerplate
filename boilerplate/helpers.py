@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from typing import Iterable
 
 import yaml
 
@@ -31,3 +32,11 @@ def find_yaml_file(path: str):
 def read_values_from_yaml(path: str) -> dict:
     with open(path) as f:
         return yaml.safe_load(f)
+
+
+def prompt_user(vals: Iterable[str]) -> dict[str]:
+    return_val = {}
+    for val in vals:
+        value = input(f"Enter value for {val}: ")
+        return_val[val] = value
+    return return_val

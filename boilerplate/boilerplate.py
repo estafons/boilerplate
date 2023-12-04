@@ -4,6 +4,7 @@ import jinja2
 from boilerplate.helpers import (
     find_jinja_template,
     find_yaml_file,
+    prompt_user,
     read_values_from_yaml,
 )
 
@@ -28,8 +29,8 @@ def create(template_path, output):
     """
     template_file = find_jinja_template(template_path)
     values_file = find_yaml_file(template_path)
-
+    values = prompt_user(read_values_from_yaml(values_file))
     with open(template_file) as f:
         template = jinja2.Template(f.read())
     with open(output, "w") as o:
-        o.write(template.render(**read_values_from_yaml(values_file)))
+        o.write(template.render(**values))
